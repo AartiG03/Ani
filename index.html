@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Three Column Layout</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		.p{
+			font-weight: bold;
+		}
+		.foot{
+			background: black;
+			background-blend-mode: darken;
+			position: fixed;
+			height: 80px;
+			bottom: 0;
+			right: 0;
+			left:0;
+		}
+
+		.container3{
+			display: flex;
+		}
+		.container2{
+			display: flex;
+			flex-wrap: wrap;
+			padding: 5px;
+			justify-content: space-between;
+			background-color: rgba(12, 104, 20, 0.388);
+		}
+		.container1 {
+			display: flex;
+		}
+		.column {
+			flex: 1;
+			background-color: #dfeda5;
+			padding: 10px;
+		}
+		.column img {
+			padding: 5px;
+			max-width: 100%;
+			height: auto;
+		}
+		.column:first-child,
+		.column:last-child{
+			background-color: #cacaca;
+		}
+
+		.table1 {
+			border-collapse: collapse;
+			border:2px solid #ddd;
+			float: left;
+			width: auto;
+			background-color: beige;
+			box-shadow: 0 0 10px rgba(0,0,0,0.3);
+		}
+		.table2 {
+			border-collapse: collapse;
+			border:2px solid #ddd;
+			float: right;
+			width: auto;
+			background-color: beige;
+			box-shadow: 0 0 10px rgba(0,0,0,0.3);
+
+		}
+
+		.table2 {
+			border-collapse: collapse;
+			border:2px solid #ddd;
+			float: right;
+			width: auto;
+			background-color: beige;
+			box-shadow: 0 0 10px rgba(0,0,0,0.3);
+
+		}
+
+		th, td {
+			border: 1px solid #dfeda5;
+			font-size: 15px;
+			font-weight: bold;
+			padding: 10px;
+		}
+
+		tr:hover{
+			background-color: #ddd;
+		}
+
+		.text-footer {
+			text-align: center;
+			padding: 20px 0;
+			font-family: 'Ubuntu', sans-serif;
+			display: flex;
+			justify-content: center;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<nav>
+		<a href="#" class="logo"><img src="./img.png" alt="Logo" width="45px" height="45px"></a>
+		<ul>
+		  <li><a href="https://www.zomato.com/pune/delivery?meta_filter=100354" target="_blank">Veg dishes</a></li>
+		  <li><a href="https://www.swiggy.com/restaurants/food-menu-multi-cuisine-non-veg-dantara-chowk-nigoj-sai-nagar-shirdi-test-1-124571" target="_blank">Non-Veg dishes</a></li>
+		  <li><a href="https://www.swiggy.com/?filters=%7B%22CUISINES%22%3A%5B%22Snacks%22%5D%7D&sortBy=RELEVANCE" target="_blank">Snacks</a></li>
+		  <li><a href="https://www.swiggy.com/?filters=%7B%22CUISINES%22%3A%5B%22Desserts%22%5D%7D&sortBy=RELEVANCE" target="_blank">Desserts</a></li>
+		</ul>
+	  </nav>
+	  
+	  
+	<div class="container1">
+		<div class="column">
+			<center><img src="./veg.png" alt="Placeholder image" width="255px" height="255px"></center>
+			<h2>Veg Food</h2>
+			<p style="color: #333333; font-size: 16px; font-family:'Times New Roman', Times, serif;">Looking for delicious and healthy vegetarian food? Look no further than our restaurant! Come taste the difference for yourself and experience the best veggie food in town.</p>
+		</div>
+		<div class="column">
+			<center><img src="./nonveg.png" alt="Placeholder image" width="255px" height="255px"></center>
+			<h2>Non-Veg Food</h2>
+			<p style="color: #333333; font-size: 16px; font-family: 'Times New Roman', Times, serif;">Looking for hearty and flavorful non-veg options? Our restaurant offers a variety of meat-based dishes made with the freshest ingredients and cooked to perfection. Try our signature dishes today!</p>
+		</div>
+		<div class="column">
+			<center><img src="./dessert.png" alt="Placeholder image" width="255px" height="255px"></center>
+			<h2>Desserts</h2>
+			<p style="color: #333333; font-size: 16px; font-family: 'Times New Roman', Times, serif;">Indulge in our mouth-watering desserts! From rich chocolate cakes to creamy cheesecakes, our selection of sweet treats will satisfy any sweet tooth. Perfect for ending any meal on a high note.
+			</p>
+		</div>
+	</div>
+	<div class="container2">
+		<div class="table1">
+		<table border="2px">
+			<tr>
+				<th style="background-color: #e8dcdc" rowspan="2"><img src="./img.png" width="45px" height="45px"></th>
+				<th style="background-color: #e8dcdc">About Us</th>
+			</tr>
+
+			<tr>
+				<th>Our restaurant has been serving our loyal
+					customers for<br>over 20 years. We pride
+					ourselves on using only the freshest <br>
+				    ingredients and offering a warm, inviting
+					atmosphere.<br>Come dine with us today!</th>
+			</tr>
+		</table>
+		</div>
+		<div class="table2">
+			<table border="2px">
+				<tr>
+					<th style="background-color: #e8dcdc" rowspan="2"><img src="./img.png" width="45px" height="45px"></th>
+					<th style="background-color: #e8dcdc">Contact Us</th>
+				</tr>
+	
+				<tr>
+					<th>
+						Address: 123 Main Street<br>
+						Phone: (555) 555-5555<br>
+						Email: info@restaurant.com<br>
+						Hours: Monday-Saturday 11am-10pm, Sunday 12pm-9pm<br>
+					</th>
+				</tr>
+			</table>
+		</div>
+		<div class="table3">
+			<div class="table2">
+				<table border="2px">
+					<tr>
+						<th rowspan="3" style="background-color: #e8dcdc"><img src="./img.png" width="45px" height="45px"></th>
+						<th style="background-color: #e8dcdc" colspan="2">Contact Us</th>
+					</tr>
+		
+					<tr>
+						<th>Email</th>
+						<td><input type="text" name="Email"></td>
+					</tr>
+					<tr>
+						<th>Feedback</th>
+						<td><input type="text" name="message"></td>
+					</tr>
+				</table>
+		</div>
+	</div>
+	<div class="container3">
+		<footer class="foot">
+			<p class="text-footer">
+				Copyright ©-All rights are reserved
+			</p>
+		</footer>
+	</div>
+</body>
+</html>
